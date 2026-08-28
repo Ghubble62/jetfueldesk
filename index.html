@@ -37,7 +37,7 @@ body {
   line-height: 1.5;
   font-size: 15px;
 }
-.page { max-width: 680px; margin: 0 auto; padding: 32px 20px 80px; }
+.page { max-width: 900px; margin: 0 auto; padding: 32px 28px 80px; }
 .header {
   display: flex; align-items: center; justify-content: space-between;
   padding: 16px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px;
@@ -49,7 +49,7 @@ body {
 .brand-domain { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.02em; }
 .landing { text-align: center; padding: 64px 0 48px; }
 .landing h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; }
-.landing .subtitle { font-size: 16px; color: var(--ink-secondary); max-width: 480px; margin: 0 auto 40px; line-height: 1.6; }
+.landing .subtitle { font-size: 16px; color: var(--ink-secondary); max-width: 720px; margin: 0 auto 40px; line-height: 1.75; }
 .role-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn { font-family: inherit; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); cursor: pointer; transition: all 150ms var(--ease-out); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
 .btn:hover { background: var(--surface-alt); }
@@ -77,6 +77,11 @@ body {
 .market-details summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--primary); }
 .market-details-body { padding-top: 10px; }
 .market-details .btn { margin-top: 12px; }
+
+.trust-note { max-width: 720px; margin: 30px auto 0; padding: 20px 24px; text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.trust-note h2 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.trust-note p { font-size: 13px; color: var(--ink-secondary); line-height: 1.75; margin-bottom: 8px; }
+.trust-note p:last-child { margin-bottom: 0; }
 @media (max-width: 560px) { .role-buttons { flex-direction: column; align-items: stretch; } }
 </style>
 </head>
@@ -102,6 +107,12 @@ body {
       <a class="btn btn-primary" href="sellers.html">Seller access</a>
     </div>
     <p style="font-size:12px;color:var(--ink-muted);margin-top:16px;">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined process.</p>
+    <div class="trust-note">
+      <h2>Your Information Stays With You</h2>
+      <p><strong>Initial qualification does not require bank account numbers, banking credentials, passwords, or other sensitive financial information.</strong></p>
+      <p>We simply need to understand your product requirement, quantity, delivery location, banking capability, and storage/logistics readiness. Transaction-specific verification is handled directly through the appropriate banks, terminals, inspection companies, and counterparties when required.</p>
+      <p><strong>We verify capability — we don't need access to your accounts.</strong></p>
+    </div>
   </div>
 
   <section class="market-board" aria-label="Current seller opportunities">

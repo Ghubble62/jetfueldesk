@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jet Fuel Desk — Verified Fuel Trading</title>
+<link rel="preconnect" href="https://googleapis.com">
+<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: oklch(98.5% 0.003 250);
+  --surface: oklch(100% 0.002 250);
+  --surface-alt: oklch(96% 0.005 250);
+  --ink: oklch(18% 0.01 250);
+  --ink-secondary: oklch(40% 0.008 250);
+  --ink-muted: oklch(55% 0.006 250);
+  --border: oklch(88% 0.008 250);
+  --border-strong: oklch(78% 0.01 250);
+  --primary: oklch(45% 0.18 250);
+  --primary-hover: oklch(38% 0.18 250);
+  --primary-surface: oklch(95% 0.03 250);
+  --success: oklch(45% 0.14 155);
+  --success-surface: oklch(94% 0.03 155);
+  --warning: oklch(55% 0.16 75);
+  --warning-surface: oklch(94% 0.04 75);
+  --danger: oklch(50% 0.18 25);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.page { max-width: 900px; margin: 0 auto; padding: 32px 28px 80px; }
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-mark { width: 28px; height: 28px; background: var(--primary); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.brand-mark svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.brand-name { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
+.brand-domain { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.02em; }
+.landing { text-align: center; padding: 64px 0 48px; }
+.landing h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; }
+.landing .subtitle { font-size: 16px; color: var(--ink-secondary); max-width: 720px; margin: 0 auto 40px; line-height: 1.75; }
+.role-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn { font-family: inherit; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); cursor: pointer; transition: all 150ms var(--ease-out); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.btn:hover { background: var(--surface-alt); }
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
+.footer-trust { text-align: left; font-size: 13px; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 20px; }
+.footer-trust strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 6px; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; }
+.footer-contact { font-size: 12px; color: var(--ink-muted); }
+.footer-contact a { color: var(--ink-secondary); text-decoration: none; }
+.footer-contact a:hover { text-decoration: underline; }
+
+.market-board { margin: 8px 0 48px; }
+.market-board-title { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 6px; }
+.market-board-subtitle { font-size: 13px; color: var(--ink-secondary); margin-bottom: 16px; line-height: 1.6; }
+.market-listing { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.market-listing h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+.market-row { display: flex; justify-content: space-between; gap: 20px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.market-row:last-of-type { border-bottom: 0; }
+.market-label { color: var(--ink-muted); }
+.market-value { color: var(--ink); text-align: right; font-weight: 500; }
+.market-note { font-size: 11px; color: var(--ink-muted); line-height: 1.6; margin-top: 14px; }
+.market-details { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; }
+.market-details summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--primary); }
+.market-details-body { padding-top: 10px; }
+.market-details .btn { margin-top: 12px; }
+
+.trust-note { max-width: 720px; margin: 30px auto 0; padding: 20px 24px; text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.trust-note h2 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.trust-note p { font-size: 13px; color: var(--ink-secondary); line-height: 1.75; margin-bottom: 8px; }
+.trust-note p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) { .role-buttons { flex-direction: column; align-items: stretch; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5c.6-.6.6-1.6 0-2.2s-1.6-.6-2.2 0L14 8.8 6 7l-1.5 1.5 6 3.5-3 3.5H4l-1 1 3 1 1 3 1-1v-3.5l3.5-3L13.5 21z"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Jet Fuel Desk</div>
+        <div class="brand-domain">jetfueldesk.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="landing">
+    <h1>Direct Connections.<br>Qualified Counterparties.</h1>
+    <p class="subtitle">Jet Fuel Desk is a direct intermediary service connecting verified fuel buyers and suppliers. Every counterpart is treated equally, and every transaction is managed with transparency, efficiency, and fair commission structures.<br><br>We connect qualified parties without unnecessary layers or delays. We do not collect or store personal financial information or sensitive account details. Verification is completed directly through authorized sources, with buyers and suppliers prepared with the required banking, inspection, and storage documentation.</p>
+    <div class="role-buttons">
+      <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+      <a class="btn btn-primary" href="sellers.html">Seller access</a>
+    </div>
+    <p style="font-size:12px;color:var(--ink-muted);margin-top:16px;">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined process.</p>
+    <div class="trust-note">
+      <h2>Your Information Stays With You</h2>
+      <p><strong>Initial qualification does not require bank account numbers, banking credentials, passwords, or other sensitive financial information.</strong></p>
+      <p>We simply need to understand your product requirement, quantity, delivery location, banking capability, and storage/logistics readiness. Transaction-specific verification is handled directly through the appropriate banks, terminals, inspection companies, and counterparties when required.</p>
+      <p><strong>We verify capability — we do not need access to your accounts.</strong></p>
+    </div>
+  </div>
+
+  <section class="market-board" aria-label="Current seller opportunities">
+    <div class="market-board-title">Current Seller Opportunities</div>
+    <p class="market-board-subtitle">Current seller-provided offers only. Seller identity and direct source contact information are withheld until the appropriate stage of a qualified, protected introduction.</p>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>EN590 10PPM — Vopak-to-Vopak</h3>
+      <div class="market-row"><span class="market-label">Locations</span><span class="market-value">Rotterdam / Houston</span></div>
+      <div class="market-row"><span class="market-label">Price</span><span class="market-value">Platts less $25/MT</span></div>
+      <div class="market-row"><span class="market-label">First lift</span><span class="market-value">100,000 MT</span></div>
+      <div class="market-row"><span class="market-label">Contract</span><span class="market-value">300,000 MT/month × 12 + rolls &amp; extensions</span></div>
+      <div class="market-row"><span class="market-label">Buyer-side commission stated</span><span class="market-value">$5.00/MT</span></div>
+      <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
+        <p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not accepted under this offer. Seller procedure provides for direct communication between the buyer's and seller's Vopak Terminal Managers for verification before injection and MT103/TT payment.</p>
+        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+      </div></details>
+    </div>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>EN590 10PPM — Tank-to-Tank FOB</h3>
+      <div class="market-row"><span class="market-label">Locations</span><span class="market-value">Rotterdam / Houston / Fujairah / Jurong / Hamriyeh</span></div>
+      <div class="market-row"><span class="market-label">FOB price</span><span class="market-value">$630–$610/MT</span></div>
+      <div class="market-row"><span class="market-label">Fujairah FOB</span><span class="market-value">$660–$640/MT</span></div>
+      <div class="market-row"><span class="market-label">CIF price</span><span class="market-value">$640–$620/MT</span></div>
+      <div class="market-row"><span class="market-label">Trial / spot</span><span class="market-value">Up to 100,000 MT (MOQ)</span></div>
+      <div class="market-row"><span class="market-label">Contract</span><span class="market-value">Up to 500,000 MT/month × 12</span></div>
+      <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
+        <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT and intermediary fee protection. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
+        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+      </div></details>
+    </div>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>EN590 10PPM / Jet A-1 / D6 — Supplier Tank to Buyer Tank</h3>
+      <div class="market-row"><span class="market-label">Products stated</span><span class="market-value">EN590 10PPM / Jet A-1 / Diesel D6</span></div>
+      <div class="market-row"><span class="market-label">Pricing code stated</span><span class="market-value">Waterborne AATGYZ00 less $50</span></div>
+      <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 28 September 2026</span></div>
+      <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
+        <p class="market-note">Seller-provided FOB supplier-tank-to-buyer-tank procedure. Buyer submits ICPO with TSA, KYC/CIS, representative identification and banking details. Following approval and CI, the procedure calls for MT799/MT199 POF, POP documentation, buyer-arranged SGS/dip test, MT103 payment within 24–48 hours after a successful dip test, injection and title transfer. The offer does not state separate quantities or separate product-specific prices for these three commodities.</p>
+        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+      </div></details>
+    </div>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>Sulfur &amp; Urea — CIF</h3>
+      <div class="market-row"><span class="market-label">Destination</span><span class="market-value">Any safe port with sufficient draft</span></div>
+      <div class="market-row"><span class="market-label">Sulfur</span><span class="market-value">Gross $410/MT · Net $400/MT</span></div>
+      <div class="market-row"><span class="market-label">Sulfur quantity</span><span class="market-value">100,000 MT minimum · 500,000 MT/month</span></div>
+      <div class="market-row"><span class="market-label">Urea</span><span class="market-value">Gross $380/MT · Net $370/MT</span></div>
+      <div class="market-row"><span class="market-label">Urea quantity</span><span class="market-value">100,000 MT minimum · 500,000 MT/month</span></div>
+      <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">28 August 2026 · valid for 10 days</span></div>
+      <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
+        <p class="market-note">CIF procedure begins with buyer LOI, followed by seller SCO and buyer ICPO with banking and corporate information. The stated procedure includes draft SPA, NCNDA/IMFPA, PPOP, a bank instrument or stated guarantee step, full POP and destination inspection before final MT103/TT settlement. Buyers should review the full redacted seller procedure before submitting documents.</p>
+        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+      </div></details>
+    </div>
+
+    <p class="market-note" style="margin-top:14px;">Jet Fuel Desk presents seller-provided commercial information as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, pricing, availability or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
+  </section>
+
+<div class="footer-contact">
+  <div class="footer-corporate-block" style="text-align: center; font-size: 12px; margin-top: 50px; padding-top: 20px; border-top: 1px solid #111111; line-height: 1.8; font-family: sans-serif;">
+    <p style="font-weight: bold; margin: 0 0 5px 0; text-transform: uppercase;">Jet Fuel Desk LLC</p>
+    <p style="margin: 0;">Corporate Headquarters: 1500 N Grant St, Ste N, Denver, CO 80203</p>
+    <p style="margin: 0;">Compliance Desk Tel: +1 (970) 780-2740</p>
+    <p style="margin: 10px 0 0 0;">
+        <a href="mailto:admin@jetfueldesk.com" style="color: #111111;">admin@jetfueldesk.com</a> | 
+        <a href="privacy.html" style="color: #111111;">Privacy Policy</a>
+    </p>
+</div>
+  </div>
+</div>
+</body>
+</html>

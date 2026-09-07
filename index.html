@@ -135,6 +135,9 @@ a.btn.btn-primary:hover {
   border-color: #082E57 !important;
 }
 .footer-contact a { color: #000000 !important; }
+
+/* Navigation hotfix: keep access buttons intact and point to live routes */
+a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -155,8 +158,8 @@ a.btn.btn-primary:hover {
     <h1>Direct Connections.<br>Qualified Counterparties.</h1>
     <p class="subtitle">Jet Fuel Desk is a direct intermediary service connecting verified fuel buyers and suppliers.<br><br>Every counterpart is treated equally, and every transaction is handled with transparency, efficiency, and direct communication.<br><br>We connect qualified parties without unnecessary layers or delays. We do not collect or store personal financial information or sensitive account details. Verification is completed directly through authorized sources, with buyers and suppliers prepared with the required banking, inspection, and storage documentation.</p>
     <div class="role-buttons">
-      <a class="btn btn-primary" href="buyers.html">Buyer access</a>
-      <a class="btn btn-primary" href="sellers.html">Seller access</a>
+      <a class="btn btn-primary" href="/buyers">Buyer access</a>
+      <a class="btn btn-primary" href="/sellers">Seller access</a>
     </div>
     <p class="bottom-line">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined process.</p>
     <div class="trust-note">
@@ -180,7 +183,7 @@ a.btn.btn-primary:hover {
       <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
       <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
         <p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not accepted under this offer. Seller procedure provides for direct communication between the buyer's and seller's Vopak Terminal Managers for verification before injection and MT103/TT payment.</p>
-        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+        <a class="btn btn-primary" href="/buyers">Buyer access</a>
       </div></details>
     </div>
 
@@ -195,7 +198,7 @@ a.btn.btn-primary:hover {
       <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">2 September 2026 · valid for 10 days</span></div>
       <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
         <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
-        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+        <a class="btn btn-primary" href="/buyers">Buyer access</a>
       </div></details>
     </div>
 
@@ -206,7 +209,7 @@ a.btn.btn-primary:hover {
       <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 28 September 2026</span></div>
       <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
         <p class="market-note">Seller-provided FOB supplier-tank-to-buyer-tank procedure. Buyer submits ICPO with TSA, KYC/CIS, representative identification and banking details. Following approval and CI, the procedure calls for MT799/MT199 POF, POP documentation, buyer-arranged SGS/dip test, MT103 payment within 24–48 hours after a successful dip test, injection and title transfer. The offer does not state separate quantities or separate product-specific prices for these three commodities.</p>
-        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+        <a class="btn btn-primary" href="/buyers">Buyer access</a>
       </div></details>
     </div>
 
@@ -220,7 +223,7 @@ a.btn.btn-primary:hover {
       <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">28 August 2026 · valid for 10 days</span></div>
       <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
         <p class="market-note">CIF procedure begins with buyer LOI, followed by seller SCO and buyer ICPO with banking and corporate information. The stated procedure includes draft SPA, NCNDA/IMFPA, PPOP, a bank instrument or stated guarantee step, full POP and destination inspection before final MT103/TT settlement. Buyers should review the full redacted seller procedure before submitting documents.</p>
-        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+        <a class="btn btn-primary" href="/buyers">Buyer access</a>
       </div></details>
     </div>
 
@@ -239,7 +242,7 @@ a.btn.btn-primary:hover {
         <div class="market-row"><span class="market-label">Base Oil SN150 / SN500 / SN650</span><span class="market-value">FOB $690–$670/MT · CIF $700–$710/MT</span></div>
         <div class="market-row"><span class="market-label">Fuel Oil CST-180 / 280 / 380</span><span class="market-value">FOB $550–$530/MT · CIF $560–$540/MT</span></div>
         <p class="market-note">Seller-provided current offer. Product, quantity, port and applicable procedure remain subject to seller/refinery review and confirmation for the specific buyer requirement.</p>
-        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+        <a class="btn btn-primary" href="/buyers">Buyer access</a>
       </div></details>
     </div>
 
@@ -335,7 +338,7 @@ a.btn.btn-primary:hover {
     </div>
 
     <p class="market-note">These are seller-provided transaction procedures presented by Jet Fuel Desk as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, banking performance or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
-    <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+    <a class="btn btn-primary" href="/buyers">Buyer access</a>
   </section>
 
 <div class="footer-contact">

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Jet Fuel Desk — Verified Fuel Trading</title>
-<link rel="preconnect" href="https://googleapis.com">
-<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://googleapis.com" rel="preconnect"/>
+<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
   --bg: oklch(98.5% 0.003 250);
@@ -103,8 +104,11 @@ body {
   .market-label { min-width: 0; }
 }
 
-</style>
 
+.market-details-static { margin-top: 12px; padding-top: 12px; border-top: 1px solid #dddddd; }
+.market-details-static .market-details-body { padding-top: 0; }
+.market-board { margin-top: 28px; }
+</style>
 <style id="final-color-override">
 html, body, .page { background: #ffffff !important; }
 body, .page, .landing, .landing p, .subtitle, .trust-note, .trust-note p,
@@ -116,7 +120,6 @@ body, .page, .landing, .landing p, .subtitle, .trust-note, .trust-note p,
 .market-listing, .trust-note, .btn { background: #ffffff !important; }
 .footer-contact a { color: #000000 !important; }
 </style>
-
 <style id="final-color-fix">
 html, body, .page, .header, .landing, .market-board, .footer, .market-listing, .trust-note, .market-details, .market-details-body {
   background: #FFFFFF !important;
@@ -141,217 +144,87 @@ a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="header">
-    <div class="brand">
-      <div class="brand-mark">
-        <svg viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5c.6-.6.6-1.6 0-2.2s-1.6-.6-2.2 0L14 8.8 6 7l-1.5 1.5 6 3.5-3 3.5H4l-1 1 3 1 1 3 1-1v-3.5l3.5-3L13.5 21z"/></svg>
-      </div>
-      <div>
-        <div class="brand-name">Jet Fuel Desk</div>
-        <div class="brand-domain">jetfueldesk.com</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="landing">
-    <h1>Direct Connections.<br>Qualified Counterparties.</h1>
-    <p class="subtitle">Jet Fuel Desk is a direct intermediary service connecting verified fuel buyers and suppliers.<br><br>Every counterpart is treated equally, and every transaction is handled with transparency, efficiency, and direct communication.<br><br>We connect qualified parties without unnecessary layers or delays. We do not collect or store personal financial information or sensitive account details. Verification is completed directly through authorized sources, with buyers and suppliers prepared with the required banking, inspection, and storage documentation.</p>
-    <div class="role-buttons">
-      <a class="btn btn-primary" href="/buyers">Buyer access</a>
-      <a class="btn btn-primary" href="/sellers">Seller access</a>
-    </div>
-    <p class="bottom-line">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined process.</p>
-    <div class="trust-note">
-      <h2>Your Information Stays With You</h2>
-      <p><strong>Initial qualification does not require bank account numbers, banking credentials, passwords, or other sensitive financial information.</strong></p>
-      <p>We simply need to understand your product requirement, quantity, delivery location, banking capability, and storage/logistics readiness. Transaction-specific verification is handled directly through the appropriate banks, terminals, inspection companies, and counterparties when required.</p>
-      <p><strong>We verify capability — we do not need access to your accounts.</strong></p>
-    </div>
-  </div>
-
-  <section class="market-board" aria-label="Current seller opportunities">
-    <div class="market-board-title">Current Seller Opportunities</div>
-    <p class="market-board-subtitle">Current seller-provided offers only. Seller identity and direct source contact information are withheld until the appropriate stage of a qualified, protected introduction.</p>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>EN590 10PPM — Vopak-to-Vopak</h3>
-      <div class="market-row"><span class="market-label">Locations</span><span class="market-value">Rotterdam / Houston</span></div>
-      <div class="market-row"><span class="market-label">Price</span><span class="market-value">Platts less $25/MT</span></div>
-      <div class="market-row"><span class="market-label">First lift</span><span class="market-value">100,000 MT</span></div>
-      <div class="market-row"><span class="market-label">Contract</span><span class="market-value">300,000 MT/month × 12 + rolls &amp; extensions</span></div>
-      <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
-      <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
-        <p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not accepted under this offer. Seller procedure provides for direct communication between the buyer's and seller's Vopak Terminal Managers for verification before injection and MT103/TT payment.</p>
-        <a class="btn btn-primary" href="/buyers">Buyer access</a>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>EN590 10PPM — Tank-to-Tank FOB</h3>
-      <div class="market-row"><span class="market-label">Locations</span><span class="market-value">Rotterdam / Houston / Fujairah / Jurong / Hamriyeh</span></div>
-      <div class="market-row"><span class="market-label">FOB price</span><span class="market-value">$630–$610/MT</span></div>
-      <div class="market-row"><span class="market-label">Fujairah FOB</span><span class="market-value">$660–$640/MT</span></div>
-      <div class="market-row"><span class="market-label">CIF price</span><span class="market-value">$640–$620/MT</span></div>
-      <div class="market-row"><span class="market-label">Trial / spot</span><span class="market-value">Up to 100,000 MT (MOQ)</span></div>
-      <div class="market-row"><span class="market-label">Contract</span><span class="market-value">Up to 500,000 MT/month × 12</span></div>
-      <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">2 September 2026 · valid for 10 days</span></div>
-      <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
-        <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
-        <a class="btn btn-primary" href="/buyers">Buyer access</a>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>EN590 10PPM / Jet A-1 / D6 — Supplier Tank to Buyer Tank</h3>
-      <div class="market-row"><span class="market-label">Products stated</span><span class="market-value">EN590 10PPM / Jet A-1 / Diesel D6</span></div>
-      <div class="market-row"><span class="market-label">Pricing code stated</span><span class="market-value">Waterborne AATGYZ00 less $50</span></div>
-      <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 28 September 2026</span></div>
-      <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
-        <p class="market-note">Seller-provided FOB supplier-tank-to-buyer-tank procedure. Buyer submits ICPO with TSA, KYC/CIS, representative identification and banking details. Following approval and CI, the procedure calls for MT799/MT199 POF, POP documentation, buyer-arranged SGS/dip test, MT103 payment within 24–48 hours after a successful dip test, injection and title transfer. The offer does not state separate quantities or separate product-specific prices for these three commodities.</p>
-        <a class="btn btn-primary" href="/buyers">Buyer access</a>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>Sulfur &amp; Urea — CIF</h3>
-      <div class="market-row"><span class="market-label">Destination</span><span class="market-value">Any safe port with sufficient draft</span></div>
-      <div class="market-row"><span class="market-label">Sulfur</span><span class="market-value">Gross $410/MT · Net $400/MT</span></div>
-      <div class="market-row"><span class="market-label">Sulfur quantity</span><span class="market-value">100,000 MT minimum · 500,000 MT/month</span></div>
-      <div class="market-row"><span class="market-label">Urea</span><span class="market-value">Gross $380/MT · Net $370/MT</span></div>
-      <div class="market-row"><span class="market-label">Urea quantity</span><span class="market-value">100,000 MT minimum · 500,000 MT/month</span></div>
-      <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">28 August 2026 · valid for 10 days</span></div>
-      <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
-        <p class="market-note">CIF procedure begins with buyer LOI, followed by seller SCO and buyer ICPO with banking and corporate information. The stated procedure includes draft SPA, NCNDA/IMFPA, PPOP, a bank instrument or stated guarantee step, full POP and destination inspection before final MT103/TT settlement. Buyers should review the full redacted seller procedure before submitting documents.</p>
-        <a class="btn btn-primary" href="/buyers">Buyer access</a>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>Multi-Product FOB / CIF Offer</h3>
-      <div class="market-row"><span class="market-label">FOB ports</span><span class="market-value">Rotterdam / Houston / Jurong / Fujairah / Qingdao / Zhoushan</span></div>
-      <div class="market-row"><span class="market-label">Products stated</span><span class="market-value">EN590 10PPM / EN590 50PPM / Jet A-1 / D6 / LNG / LPG / Gasoline / LCO / Base Oil / Fuel Oil</span></div>
-      <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
-      <details class="market-details"><summary>View current product ranges</summary><div class="market-details-body">
-        <div class="market-row"><span class="market-label">EN590 10PPM / 50PPM</span><span class="market-value">FOB $630–$610/MT · CIF $640–$620/MT</span></div>
-        <div class="market-row"><span class="market-label">Jet A-1</span><span class="market-value">FOB $100–$96/BBL · CIF $112–$108/BBL</span></div>
-        <div class="market-row"><span class="market-label">D6</span><span class="market-value">FOB $1.08–$1.04/GAL · CIF $1.12–$1.08/GAL</span></div>
-        <div class="market-row"><span class="market-label">LNG / LPG</span><span class="market-value">FOB $680–$660/MT · CIF $690–$670/MT</span></div>
-        <div class="market-row"><span class="market-label">Gasoline 93 / 95</span><span class="market-value">FOB $580–$560/MT · CIF $590–$570/MT</span></div>
-        <div class="market-row"><span class="market-label">LCO</span><span class="market-value">FOB $460–$440/MT · CIF $570–$550/MT</span></div>
-        <div class="market-row"><span class="market-label">Base Oil SN150 / SN500 / SN650</span><span class="market-value">FOB $690–$670/MT · CIF $700–$710/MT</span></div>
-        <div class="market-row"><span class="market-label">Fuel Oil CST-180 / 280 / 380</span><span class="market-value">FOB $550–$530/MT · CIF $560–$540/MT</span></div>
-        <p class="market-note">Seller-provided current offer. Product, quantity, port and applicable procedure remain subject to seller/refinery review and confirmation for the specific buyer requirement.</p>
-        <a class="btn btn-primary" href="/buyers">Buyer access</a>
-      </div></details>
-    </div>
-
-    <p class="market-note" style="margin-top:14px;">Jet Fuel Desk presents seller-provided commercial information as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, pricing, availability or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
-  </section>
-
-  <section class="market-board" aria-label="Current transaction procedures">
-    <div class="market-board-title">Current Transaction Procedures — Review Before Buyer Access</div>
-    <p class="market-board-subtitle">Seller-provided procedures for the five current offers. Seller identity and direct source contact information remain withheld. Buyers should select only a structure their company, bank, terminal and logistics providers can perform.</p>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>EN590 10PPM — Vopak-to-Vopak — Rotterdam / Houston</h3>
-      <details class="market-details" open><summary>View Vopak-to-Vopak procedure</summary><div class="market-details-body">
-        <ol>
-          <li>Buyer submits CIS and issues ICPO for seller verification and approval, identifying the buyer's Vopak facility/name.</li>
-          <li>Seller issues Commercial Invoice (CI); buyer signs and returns it within 24 hours.</li>
-          <li>Seller authorizes the buyer's Vopak Terminal Manager to communicate directly with the seller's Vopak Terminal Manager to verify product existence.</li>
-          <li>After seller-terminal confirmation, buyer's Vopak Terminal Manager submits its Vopak Terminal Agreement/reference and Vopak barcode.</li>
-          <li>Buyer completes the applicable Vopak terminal protocols.</li>
-          <li>Seller releases Full POP to the buyer's Vopak Terminal Manager and injection begins.</li>
-          <li>After completed injection, buyer pays by MT103/TT and seller transfers title.</li>
-          <li>Only direct Vopak lease holders are accepted; JV/group, proxy and sublease structures are not accepted under this offer.</li>
-        </ol>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>EN590 10PPM — Tank-to-Tank FOB</h3>
-      <details class="market-details"><summary>View tank-to-tank procedure</summary><div class="market-details-body">
-        <ol>
-          <li>Buyer submits ICPO with company registration and TSA. If the buyer has its own tank farm, the tank-farm name is submitted for seller review.</li>
-          <li>Seller issues Commercial Invoice (CI) for the available quantity; buyer signs and returns it.</li>
-          <li>Seller issues Dip Test Authorization (DTA), endorsed by the relevant parties including the buyer's tank farm. The DTA includes the tank number and hub number.</li>
-          <li>Seller issues the stated PPOP package, including recent SGS, TSR/tank-storage documents, port-authority authenticity documentation, origin/authority documents and export license.</li>
-          <li>Buyer orders SGS Q&amp;Q in seller's tank at buyer expense.</li>
-          <li>After satisfactory Q&amp;Q, buyer submits the required TSR/ATV/SGS documentation and seller issues the final CI/title documentation.</li>
-          <li>Buyer pays by MT103/TT and product injection into the buyer's secured tank proceeds under the stated procedure.</li>
-          <li>This offer excludes Vopak and certain other named operators and also states that a tank-extension structure may be used.</li>
-        </ol>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>EN590 10PPM / Jet A-1 / D6 — Supplier Tank to Buyer Tank</h3>
-      <details class="market-details"><summary>View supplier-tank-to-buyer-tank procedure</summary><div class="market-details-body">
-        <ol>
-          <li>Buyer issues ICPO incorporating the seller procedure together with TSA, KYC/CIS, representative identification and banking details.</li>
-          <li>After buyer-company, bank and TSA review, seller issues Commercial Invoice (CI).</li>
-          <li>Buyer signs and returns the CI and provides MT799/MT199 Proof of Funds by SWIFT as stated in the offer.</li>
-          <li>Seller provides the stated POP package, including DTA, injection report, TSR with GPS coordinates, tank-farm barcode information, commitment to supply, registration/export documentation, ATSC, injection schedule, ATV and fresh SGS Q&amp;Q.</li>
-          <li>Buyer verifies the product/POP documents and orders SGS to conduct the dip test in the seller's tank at buyer expense.</li>
-          <li>Following a successful dip test, buyer pays by MT103 within 24–48 hours and product injection into the buyer's designated tank proceeds.</li>
-          <li>Seller transfers title of ownership into the buyer's name and issues the title-ownership certificate.</li>
-        </ol>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>Sulfur &amp; Urea — CIF</h3>
-      <details class="market-details"><summary>View CIF procedure</summary><div class="market-details-body">
-        <ol>
-          <li>Buyer issues LOI; seller responds with SCO.</li>
-          <li>Buyer issues ICPO including the banking and corporate information required by the seller procedure.</li>
-          <li>Seller issues draft SPA; the parties review and execute the transaction documentation, including the stated transaction-protection agreement.</li>
-          <li>Seller issues the stated PPOP package, including origin, registration, availability, product passport/specifications, commitment to supply and proforma invoice.</li>
-          <li>After PPOP verification, buyer provides the financial instrument or guarantee step required by the seller procedure within the stated banking period.</li>
-          <li>After confirmation of the instrument/deposit, seller issues the stated 2% performance bond and Full POP package and proceeds with shipment.</li>
-          <li>At the discharge port, buyer coordinates SGS/CIQ inspection.</li>
-          <li>Following favorable destination inspection, buyer settles by MT103/TT under the SPA and the annual contract program continues after successful first shipment.</li>
-        </ol>
-        <p class="market-note"><strong>Important:</strong> The seller procedure also contains a stated $500,000 logistics-security deposit alternative if the required financial instrument is not issued within the specified period. Buyers should review the full redacted offer before proceeding.</p>
-      </div></details>
-    </div>
-
-    <div class="market-listing" style="margin-bottom:12px;">
-      <h3>Multi-Product FOB / CIF — Procedure Options</h3>
-      <p class="market-note">The current multi-product offer provides multiple transaction structures. The applicable procedure must be identified and accepted for the buyer's specific requirement.</p>
-      <details class="market-details"><summary>View available procedure options</summary><div class="market-details-body">
-        <ol>
-          <li>FOB Dip Test / Tank Injection</li>
-          <li>FOB Tank Takeover</li>
-          <li>FOB Tank Terminal Clearance / Tank Takeover</li>
-          <li>FOB Vessel-to-Tank (VTT)</li>
-          <li>FOB Tank-to-Tank (TTT)</li>
-          <li>FOB Tank-to-Tank / SGS Before Payment</li>
-          <li>FOB Rotterdam Tank-to-Tank</li>
-          <li>FOB Tank-to-Vessel (TTV)</li>
-          <li>FOB Title Takeover (TTO)</li>
-          <li>CIF Procedure</li>
-        </ol>
-        <p class="market-note">Buyer documentation, financial-capability verification, logistics documentation and payment sequence vary by procedure. Buyers should review the applicable redacted seller procedure before issuing transaction documents.</p>
-      </div></details>
-    </div>
-
-    <p class="market-note">These are seller-provided transaction procedures presented by Jet Fuel Desk as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, banking performance or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
-    <a class="btn btn-primary" href="/buyers">Buyer access</a>
-  </section>
-
-<div class="footer-contact">
-  <div class="footer-corporate-block" style="text-align: center; font-size: 12px; margin-top: 50px; padding-top: 20px; border-top: 1px solid #111111; line-height: 1.8; font-family: sans-serif;">
-    <p style="font-weight: bold; margin: 0 0 5px 0; text-transform: uppercase;">Jet Fuel Desk LLC</p>
-    <p style="margin: 0;">Corporate Headquarters: 1500 N Grant St, Ste N, Denver, CO 80203</p>
-    <p style="margin: 0;">Compliance Desk Tel: +1 (970) 780-2740</p>
-    <p style="margin: 10px 0 0 0;">
-        <a href="mailto:admin@jetfueldesk.com" style="color: #111111;">admin@jetfueldesk.com</a> | 
-        <a href="privacy.html" style="color: #111111;">Privacy Policy</a>
-    </p>
+<div class="page"><div class="header">
+<div class="brand">
+<div class="brand-mark">
+<svg viewbox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5c.6-.6.6-1.6 0-2.2s-1.6-.6-2.2 0L14 8.8 6 7l-1.5 1.5 6 3.5-3 3.5H4l-1 1 3 1 1 3 1-1v-3.5l3.5-3L13.5 21z"></path></svg>
 </div>
-  </div>
+<div>
+<div class="brand-name">Jet Fuel Desk</div>
+<div class="brand-domain">jetfueldesk.com</div>
 </div>
+</div>
+</div><section aria-label="Current seller opportunities" class="market-board">
+<div class="market-board-title">What's Available</div>
+<p class="market-board-subtitle">Current seller-provided offers handled through Jet Fuel Desk. Contact us directly with your product, quantity, destination, and transaction requirements.</p>
+<div class="market-listing" style="margin-bottom:12px;">
+<h3>EN590 10PPM — Vopak-to-Vopak</h3>
+<div class="market-row"><span class="market-label">Locations</span><span class="market-value">Rotterdam / Houston</span></div>
+<div class="market-row"><span class="market-label">Price</span><span class="market-value">Platts less $25/MT</span></div>
+<div class="market-row"><span class="market-label">First lift</span><span class="market-value">100,000 MT</span></div>
+<div class="market-row"><span class="market-label">Contract</span><span class="market-value">300,000 MT/month × 12 + rolls &amp; extensions</span></div>
+<div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
+<div class="market-details-static"><div class="market-details-body">
+<p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not accepted under this offer. Seller procedure provides for direct communication between the buyer's and seller's Vopak Terminal Managers for verification before injection and MT103/TT payment.</p>
+
+</div></div>
+</div>
+<div class="market-listing" style="margin-bottom:12px;">
+<h3>EN590 10PPM — Tank-to-Tank FOB</h3>
+<div class="market-row"><span class="market-label">Locations</span><span class="market-value">Rotterdam / Houston / Fujairah / Jurong / Hamriyeh</span></div>
+<div class="market-row"><span class="market-label">FOB price</span><span class="market-value">$630–$610/MT</span></div>
+<div class="market-row"><span class="market-label">Fujairah FOB</span><span class="market-value">$660–$640/MT</span></div>
+<div class="market-row"><span class="market-label">CIF price</span><span class="market-value">$640–$620/MT</span></div>
+<div class="market-row"><span class="market-label">Trial / spot</span><span class="market-value">Up to 100,000 MT (MOQ)</span></div>
+<div class="market-row"><span class="market-label">Contract</span><span class="market-value">Up to 500,000 MT/month × 12</span></div>
+<div class="market-row"><span class="market-label">Offer date</span><span class="market-value">2 September 2026 · valid for 10 days</span></div>
+<div class="market-details-static"><div class="market-details-body">
+<p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
+
+</div></div>
+</div>
+<div class="market-listing" style="margin-bottom:12px;">
+<h3>EN590 10PPM / Jet A-1 / D6 — Supplier Tank to Buyer Tank</h3>
+<div class="market-row"><span class="market-label">Products stated</span><span class="market-value">EN590 10PPM / Jet A-1 / Diesel D6</span></div>
+<div class="market-row"><span class="market-label">Pricing code stated</span><span class="market-value">Waterborne AATGYZ00 less $50</span></div>
+<div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 28 September 2026</span></div>
+<div class="market-details-static"><div class="market-details-body">
+<p class="market-note">Seller-provided FOB supplier-tank-to-buyer-tank procedure. Buyer submits ICPO with TSA, KYC/CIS, representative identification and banking details. Following approval and CI, the procedure calls for MT799/MT199 POF, POP documentation, buyer-arranged SGS/dip test, MT103 payment within 24–48 hours after a successful dip test, injection and title transfer. The offer does not state separate quantities or separate product-specific prices for these three commodities.</p>
+
+</div></div>
+</div>
+<div class="market-listing" style="margin-bottom:12px;">
+<h3>Sulfur &amp; Urea — CIF</h3>
+<div class="market-row"><span class="market-label">Destination</span><span class="market-value">Any safe port with sufficient draft</span></div>
+<div class="market-row"><span class="market-label">Sulfur</span><span class="market-value">Gross $410/MT · Net $400/MT</span></div>
+<div class="market-row"><span class="market-label">Sulfur quantity</span><span class="market-value">100,000 MT minimum · 500,000 MT/month</span></div>
+<div class="market-row"><span class="market-label">Urea</span><span class="market-value">Gross $380/MT · Net $370/MT</span></div>
+<div class="market-row"><span class="market-label">Urea quantity</span><span class="market-value">100,000 MT minimum · 500,000 MT/month</span></div>
+<div class="market-row"><span class="market-label">Offer date</span><span class="market-value">28 August 2026 · valid for 10 days</span></div>
+<div class="market-details-static"><div class="market-details-body">
+<p class="market-note">CIF procedure begins with buyer LOI, followed by seller SCO and buyer ICPO with banking and corporate information. The stated procedure includes draft SPA, NCNDA/IMFPA, PPOP, a bank instrument or stated guarantee step, full POP and destination inspection before final MT103/TT settlement. Buyers should review the full redacted seller procedure before submitting documents.</p>
+
+</div></div>
+</div>
+<div class="market-listing" style="margin-bottom:12px;">
+<h3>Multi-Product FOB / CIF Offer</h3>
+<div class="market-row"><span class="market-label">FOB ports</span><span class="market-value">Rotterdam / Houston / Jurong / Fujairah / Qingdao / Zhoushan</span></div>
+<div class="market-row"><span class="market-label">Products stated</span><span class="market-value">EN590 10PPM / EN590 50PPM / Jet A-1 / D6 / LNG / LPG / Gasoline / LCO / Base Oil / Fuel Oil</span></div>
+<div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
+<div class="market-details-static"><div class="market-details-body">
+<div class="market-row"><span class="market-label">EN590 10PPM / 50PPM</span><span class="market-value">FOB $630–$610/MT · CIF $640–$620/MT</span></div>
+<div class="market-row"><span class="market-label">Jet A-1</span><span class="market-value">FOB $100–$96/BBL · CIF $112–$108/BBL</span></div>
+<div class="market-row"><span class="market-label">D6</span><span class="market-value">FOB $1.08–$1.04/GAL · CIF $1.12–$1.08/GAL</span></div>
+<div class="market-row"><span class="market-label">LNG / LPG</span><span class="market-value">FOB $680–$660/MT · CIF $690–$670/MT</span></div>
+<div class="market-row"><span class="market-label">Gasoline 93 / 95</span><span class="market-value">FOB $580–$560/MT · CIF $590–$570/MT</span></div>
+<div class="market-row"><span class="market-label">LCO</span><span class="market-value">FOB $460–$440/MT · CIF $570–$550/MT</span></div>
+<div class="market-row"><span class="market-label">Base Oil SN150 / SN500 / SN650</span><span class="market-value">FOB $690–$670/MT · CIF $700–$710/MT</span></div>
+<div class="market-row"><span class="market-label">Fuel Oil CST-180 / 280 / 380</span><span class="market-value">FOB $550–$530/MT · CIF $560–$540/MT</span></div>
+<p class="market-note">Seller-provided current offer. Product, quantity, port and applicable procedure remain subject to seller/refinery review and confirmation for the specific buyer requirement.</p>
+
+</div></div>
+</div>
+<p class="market-note" style="margin-top:14px;">Jet Fuel Desk presents seller-provided commercial information as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, pricing, availability or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
+</section><section aria-label="Contact Jet Fuel Desk" class="market-board"><div class="market-board-title">Contact Jet Fuel Desk</div><p class="market-board-subtitle">For buyer or seller inquiries, contact David Pisco / Jet Fuel Desk LLC.</p><div class="market-listing"><div class="market-row"><span class="market-label">Email</span><span class="market-value">admin@jetfueldesk.com</span></div><div class="market-row"><span class="market-label">Telephone</span><span class="market-value">+1 (970) 780-2740</span></div><div class="market-row"><span class="market-label">Website</span><span class="market-value">jetfueldesk.com</span></div><div class="market-row"><span class="market-label">Corporate Headquarters</span><span class="market-value">1500 N Grant St, Ste N, Denver, CO 80203</span></div></div></section></div>
 </body>
 </html>

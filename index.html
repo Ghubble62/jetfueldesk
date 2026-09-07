@@ -1,162 +1,46 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jet Fuel Desk — Verified Fuel Trading</title>
-<link href="https://googleapis.com" rel="preconnect"/>
-<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jet Fuel Desk — Current Availability</title>
 <style>
-:root {
-  --bg: oklch(98.5% 0.003 250);
-  --surface: oklch(100% 0.002 250);
-  --surface-alt: oklch(96% 0.005 250);
-  --ink: oklch(18% 0.01 250);
-  --ink-secondary: oklch(40% 0.008 250);
-  --ink-muted: oklch(55% 0.006 250);
-  --border: oklch(88% 0.008 250);
-  --border-strong: oklch(78% 0.01 250);
-  --primary: oklch(45% 0.18 250);
-  --primary-hover: oklch(38% 0.18 250);
-  --primary-surface: oklch(95% 0.03 250);
-  --success: oklch(45% 0.14 155);
-  --success-surface: oklch(94% 0.03 155);
-  --warning: oklch(55% 0.16 75);
-  --warning-surface: oklch(94% 0.04 75);
-  --danger: oklch(50% 0.18 25);
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#000;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.55}
+.page{max-width:1100px;margin:0 auto;padding:28px 22px 60px}
+.header{padding-bottom:22px;border-bottom:1px solid #ddd;margin-bottom:28px}
+.brand-name{font-size:26px;font-weight:700}
+.brand-domain{font-size:16px;font-weight:700}
+h1{font-size:32px;margin:0 0 8px}
+.intro{font-size:18px;margin:0 0 30px}
+.market-listing{display:block !important;visibility:visible !important;opacity:1 !important;height:auto !important;max-height:none !important;overflow:visible !important;padding:22px 0;border-top:2px solid #111}
+.market-listing h2,.market-listing h3{font-size:22px;margin:0 0 14px}
+.market-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:18px;padding:5px 0}
+.market-label{font-weight:700}
+.market-value{font-weight:600}
+.market-note,.market-details-body p,.market-details-body li{font-size:17px}
+.market-details-static,.market-details-body{display:block !important;visibility:visible !important;height:auto !important;max-height:none !important;overflow:visible !important}
+.contact{border-top:2px solid #111;margin-top:30px;padding-top:24px}
+.contact h2{font-size:24px;margin:0 0 12px}
+.contact p{margin:5px 0;font-weight:700}
+a,button,details,summary{display:none !important}
+@media(max-width:650px){
+ body{font-size:17px}
+ .page{padding:20px 16px 45px}
+ h1{font-size:27px}
+ .market-row{grid-template-columns:1fr;gap:1px;padding:8px 0}
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-  font-size: 18px;
-  font-weight: 600;
-}
-.page { max-width: 900px; margin: 0 auto; padding: 32px 28px 80px; }
-.header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px;
-}
-.brand { display: flex; align-items: center; gap: 10px; }
-.brand-mark { width: 28px; height: 28px; background: var(--primary); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-.brand-mark svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.brand-name { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
-.brand-domain { font-size: 16px; color: var(--ink-muted); letter-spacing: 0.02em; font-weight: 600; }
-.landing { text-align: center; padding: 64px 0 48px; }
-.landing h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; }
-.landing .subtitle { font-size: 19px; color: var(--ink-secondary); max-width: 760px; margin: 0 auto 32px; line-height: 1.65; font-weight: 600; text-align: left; }
-.role-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn { font-family: inherit; font-size: 17px; font-weight: 700; padding: 10px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); cursor: pointer; transition: all 150ms var(--ease-out); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
-.btn:hover { background: var(--surface-alt); }
-.btn:active { transform: scale(0.98); }
-.btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
-.btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
-.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
-.footer-trust { text-align: left; font-size: 17px; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 20px; }
-.footer-trust strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 6px; font-size: 16px; letter-spacing: 0.03em; text-transform: uppercase; }
-.footer-contact { font-size: 16px; color: var(--ink-muted); }
-.footer-contact a { color: var(--ink-secondary); text-decoration: none; }
-.footer-contact a:hover { text-decoration: underline; }
-
-.market-board { max-width: 760px; margin: 8px auto 48px; }
-.market-board-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
-.market-board-subtitle { font-size: 17px; font-weight: 600; color: var(--ink-secondary); margin-bottom: 16px; line-height: 1.6; }
-.market-listing { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
-.market-listing h3 { font-size: 19px; font-weight: 700; margin-bottom: 12px; }
-.market-row { display: flex; justify-content: space-between; gap: 24px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 17px; line-height: 1.5; }
-.market-row:last-of-type { border-bottom: 0; }
-.market-label { color: var(--ink-muted); }
-.market-value { color: var(--ink); text-align: right; font-weight: 700; }
-.market-note { font-size: 17px; font-weight: 600; color: var(--ink-muted); line-height: 1.6; margin-top: 14px; }
-.market-details { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; }
-.market-details summary { cursor: pointer; font-size: 17px; font-weight: 700; color: var(--primary); }
-.market-details-body { padding-top: 10px; }
-.market-details .btn { margin-top: 12px; }
-
-.trust-note { max-width: 760px; margin: 30px auto 0; padding: 20px 24px; text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
-.trust-note h2 { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
-.trust-note p { font-size: 17px; font-weight: 600; color: var(--ink-secondary); line-height: 1.75; margin-bottom: 8px; }
-.trust-note p:last-child { margin-bottom: 0; }
-@media (max-width: 560px) { .role-buttons { flex-direction: column; align-items: stretch; } }
-
-.market-details-body ul { margin: 8px 0 0 18px; padding: 0; }
-.market-details-body li { font-size: 17px; font-weight: 600; color: var(--ink-secondary); line-height: 1.65; margin: 5px 0; }
-.market-details-body p { font-size: 17px; font-weight: 600; }
-
-
-.bottom-line { max-width: 760px; margin: 20px auto 0; font-size: 19px; line-height: 1.6; color: var(--ink); font-weight: 700; text-align: center; }
-.market-label { font-weight: 700; min-width: 165px; }
-.footer-corporate-block { font-size: 16px !important; font-weight: 600; }
-@media (max-width: 700px) {
-  .page { padding: 22px 16px 60px; }
-  .landing { padding: 42px 0 36px; }
-  .landing .subtitle { font-size: 18px; max-width: 100%; }
-  .market-board, .trust-note, .bottom-line { max-width: 100%; }
-  .market-row { display: grid; grid-template-columns: 1fr; gap: 3px; }
-  .market-value { text-align: left; }
-  .market-label { min-width: 0; }
-}
-
-
-.market-details-static { margin-top: 12px; padding-top: 12px; border-top: 1px solid #dddddd; }
-.market-details-static .market-details-body { padding-top: 0; }
-.market-board { margin-top: 28px; }
-</style>
-<style id="final-color-override">
-html, body, .page { background: #ffffff !important; }
-body, .page, .landing, .landing p, .subtitle, .trust-note, .trust-note p,
-.market-board, .market-board-subtitle, .market-listing, .market-row, .market-label,
-.market-value, .market-note, .market-details, .market-details-body, .footer,
-.footer-trust, .footer-contact, .brand-name, .brand-domain, details, summary {
-  color: #000000 !important;
-}
-.market-listing, .trust-note, .btn { background: #ffffff !important; }
-.footer-contact a { color: #000000 !important; }
-</style>
-<style id="final-color-fix">
-html, body, .page, .header, .landing, .market-board, .footer, .market-listing, .trust-note, .market-details, .market-details-body {
-  background: #FFFFFF !important;
-}
-body, .page, .landing, .subtitle, .market-board-title, .market-board-subtitle, .market-listing, .market-listing h3, .market-row, .market-label, .market-value, .market-note, .market-details, .market-details summary, .market-details-body, .market-details-body li, .trust-note, .trust-note h2, .trust-note p, .bottom-line, .footer-trust, .footer-trust strong, .footer-contact, .brand-name, .brand-domain {
-  color: #000000 !important;
-}
-a.btn.btn-primary {
-  background: #0B3A6E !important;
-  color: #FFFFFF !important;
-  border-color: #0B3A6E !important;
-}
-a.btn.btn-primary:hover {
-  background: #082E57 !important;
-  color: #FFFFFF !important;
-  border-color: #082E57 !important;
-}
-.footer-contact a { color: #000000 !important; }
-
-/* Navigation hotfix: keep access buttons intact and point to live routes */
-a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 </style>
 </head>
 <body>
-<div class="page"><div class="header">
-<div class="brand">
-<div class="brand-mark">
-<svg viewbox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5c.6-.6.6-1.6 0-2.2s-1.6-.6-2.2 0L14 8.8 6 7l-1.5 1.5 6 3.5-3 3.5H4l-1 1 3 1 1 3 1-1v-3.5l3.5-3L13.5 21z"></path></svg>
-</div>
-<div>
+<div class="page">
+<header class="header">
 <div class="brand-name">Jet Fuel Desk</div>
 <div class="brand-domain">jetfueldesk.com</div>
-</div>
-</div>
-</div><section aria-label="Current seller opportunities" class="market-board">
-<div class="market-board-title">What's Available</div>
-<p class="market-board-subtitle">Current seller-provided offers handled through Jet Fuel Desk. Contact us directly with your product, quantity, destination, and transaction requirements.</p>
+</header>
+<main>
+<h1>What's Available</h1>
+<p class="intro">Current seller-provided offers handled through Jet Fuel Desk. Contact us directly with your product, quantity, destination, and transaction requirements.</p>
 <div class="market-listing" style="margin-bottom:12px;">
 <h3>EN590 10PPM — Vopak-to-Vopak</h3>
 <div class="market-row"><span class="market-label">Locations</span><span class="market-value">Rotterdam / Houston</span></div>
@@ -166,7 +50,6 @@ a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
 <div class="market-details-static"><div class="market-details-body">
 <p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not accepted under this offer. Seller procedure provides for direct communication between the buyer's and seller's Vopak Terminal Managers for verification before injection and MT103/TT payment.</p>
-
 </div></div>
 </div>
 <div class="market-listing" style="margin-bottom:12px;">
@@ -180,7 +63,6 @@ a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">2 September 2026 · valid for 10 days</span></div>
 <div class="market-details-static"><div class="market-details-body">
 <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
-
 </div></div>
 </div>
 <div class="market-listing" style="margin-bottom:12px;">
@@ -190,7 +72,6 @@ a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 28 September 2026</span></div>
 <div class="market-details-static"><div class="market-details-body">
 <p class="market-note">Seller-provided FOB supplier-tank-to-buyer-tank procedure. Buyer submits ICPO with TSA, KYC/CIS, representative identification and banking details. Following approval and CI, the procedure calls for MT799/MT199 POF, POP documentation, buyer-arranged SGS/dip test, MT103 payment within 24–48 hours after a successful dip test, injection and title transfer. The offer does not state separate quantities or separate product-specific prices for these three commodities.</p>
-
 </div></div>
 </div>
 <div class="market-listing" style="margin-bottom:12px;">
@@ -203,7 +84,6 @@ a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">28 August 2026 · valid for 10 days</span></div>
 <div class="market-details-static"><div class="market-details-body">
 <p class="market-note">CIF procedure begins with buyer LOI, followed by seller SCO and buyer ICPO with banking and corporate information. The stated procedure includes draft SPA, NCNDA/IMFPA, PPOP, a bank instrument or stated guarantee step, full POP and destination inspection before final MT103/TT settlement. Buyers should review the full redacted seller procedure before submitting documents.</p>
-
 </div></div>
 </div>
 <div class="market-listing" style="margin-bottom:12px;">
@@ -221,10 +101,16 @@ a.btn.btn-primary { white-space: nowrap; text-decoration: none; }
 <div class="market-row"><span class="market-label">Base Oil SN150 / SN500 / SN650</span><span class="market-value">FOB $690–$670/MT · CIF $700–$710/MT</span></div>
 <div class="market-row"><span class="market-label">Fuel Oil CST-180 / 280 / 380</span><span class="market-value">FOB $550–$530/MT · CIF $560–$540/MT</span></div>
 <p class="market-note">Seller-provided current offer. Product, quantity, port and applicable procedure remain subject to seller/refinery review and confirmation for the specific buyer requirement.</p>
-
 </div></div>
 </div>
-<p class="market-note" style="margin-top:14px;">Jet Fuel Desk presents seller-provided commercial information as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, pricing, availability or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
-</section><section aria-label="Contact Jet Fuel Desk" class="market-board"><div class="market-board-title">Contact Jet Fuel Desk</div><p class="market-board-subtitle">For buyer or seller inquiries, contact David Pisco / Jet Fuel Desk LLC.</p><div class="market-listing"><div class="market-row"><span class="market-label">Email</span><span class="market-value">admin@jetfueldesk.com</span></div><div class="market-row"><span class="market-label">Telephone</span><span class="market-value">+1 (970) 780-2740</span></div><div class="market-row"><span class="market-label">Website</span><span class="market-value">jetfueldesk.com</span></div><div class="market-row"><span class="market-label">Corporate Headquarters</span><span class="market-value">1500 N Grant St, Ste N, Denver, CO 80203</span></div></div></section></div>
+<section class="contact">
+<h2>Contact Jet Fuel Desk</h2>
+<p>David Pisco / Jet Fuel Desk LLC</p>
+<p>Email: admin@jetfueldesk.com</p>
+<p>Telephone: +1 (970) 780-2740</p>
+<p>Website: jetfueldesk.com</p>
+</section>
+</main>
+</div>
 </body>
 </html>

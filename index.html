@@ -34,8 +34,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-  font-size: 15px;
+  line-height: 1.6;
+  font-size: 16px;
 }
 .page { max-width: 900px; margin: 0 auto; padding: 32px 28px 80px; }
 .header {
@@ -45,44 +45,99 @@ body {
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand-mark { width: 28px; height: 28px; background: var(--primary); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
 .brand-mark svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.brand-name { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
-.brand-domain { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.02em; }
+.brand-name { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; }
+.brand-domain { font-size: 13px; color: var(--ink-muted); letter-spacing: 0.02em; }
 .landing { text-align: center; padding: 64px 0 48px; }
 .landing h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; }
 .landing .subtitle { font-size: 16px; color: var(--ink-secondary); max-width: 720px; margin: 0 auto 40px; line-height: 1.75; }
 .role-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn { font-family: inherit; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); cursor: pointer; transition: all 150ms var(--ease-out); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.btn { font-family: inherit; font-size: 15px; font-weight: 500; padding: 10px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); cursor: pointer; transition: all 150ms var(--ease-out); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
 .btn:hover { background: var(--surface-alt); }
 .btn:active { transform: scale(0.98); }
 .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
 .btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
 .footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
-.footer-trust { text-align: left; font-size: 13px; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 20px; }
-.footer-trust strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 6px; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; }
-.footer-contact { font-size: 12px; color: var(--ink-muted); }
+.footer-trust { text-align: left; font-size: 15px; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 20px; }
+.footer-trust strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 6px; font-size: 14px; letter-spacing: 0.03em; text-transform: uppercase; }
+.footer-contact { font-size: 14px; color: var(--ink-muted); }
 .footer-contact a { color: var(--ink-secondary); text-decoration: none; }
 .footer-contact a:hover { text-decoration: underline; }
 
 .market-board { margin: 8px 0 48px; }
-.market-board-title { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 6px; }
-.market-board-subtitle { font-size: 13px; color: var(--ink-secondary); margin-bottom: 16px; line-height: 1.6; }
+.market-board-title { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 6px; }
+.market-board-subtitle { font-size: 15px; color: var(--ink-secondary); margin-bottom: 16px; line-height: 1.6; }
 .market-listing { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
-.market-listing h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
-.market-row { display: flex; justify-content: space-between; gap: 20px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.market-listing h3 { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+.market-row { display: flex; justify-content: space-between; gap: 20px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
 .market-row:last-of-type { border-bottom: 0; }
 .market-label { color: var(--ink-muted); }
 .market-value { color: var(--ink); text-align: right; font-weight: 500; }
-.market-note { font-size: 11px; color: var(--ink-muted); line-height: 1.6; margin-top: 14px; }
+.market-note { font-size: 14px; color: var(--ink-muted); line-height: 1.6; margin-top: 14px; }
 .market-details { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; }
-.market-details summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--primary); }
+.market-details summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--primary); }
 .market-details-body { padding-top: 10px; }
 .market-details .btn { margin-top: 12px; }
 
 .trust-note { max-width: 720px; margin: 30px auto 0; padding: 20px 24px; text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
-.trust-note h2 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
-.trust-note p { font-size: 13px; color: var(--ink-secondary); line-height: 1.75; margin-bottom: 8px; }
+.trust-note h2 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+.trust-note p { font-size: 15px; color: var(--ink-secondary); line-height: 1.75; margin-bottom: 8px; }
 .trust-note p:last-child { margin-bottom: 0; }
 @media (max-width: 560px) { .role-buttons { flex-direction: column; align-items: stretch; } }
+
+.market-details-body ul { margin: 8px 0 0 18px; padding: 0; }
+.market-details-body li { font-size: 15px; color: var(--ink-secondary); line-height: 1.65; margin: 5px 0; }
+.market-details-body p { font-size: 15px; }
+
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .page { padding-left: 18px; padding-right: 18px; }
+  .market-row { flex-direction: column; gap: 3px; font-size: 15px; }
+  .market-value { text-align: left; }
+  .landing .subtitle, .trust-note p, .market-board-subtitle, .market-details-body li, .market-details-body p { font-size: 15px; }
+}
+
+/* Uniform bold typography — sizes preserved */
+body, body * { font-weight: 700 !important; }
+svg, svg * { font-weight: initial !important; }
+
+/* Alignment cleanup */
+.landing .subtitle, .trust-note, .market-board-subtitle, .market-note, .market-details-body p, .market-details-body li, .footer-trust { text-align: left; }
+.market-listing { text-align: left; }
+.market-row { display: grid; grid-template-columns: 180px minmax(0,1fr); align-items: start; gap: 24px; }
+.market-label { text-align: left; }
+.market-value { text-align: left; }
+.market-details-body ul { margin-left: 22px; }
+@media (max-width: 560px) { .market-row { grid-template-columns: 1fr; gap: 3px; } }
+
+/* Final readability + alignment adjustment */
+body { font-size: 17px !important; }
+.page { max-width: 960px !important; }
+.landing .subtitle,
+.landing > p,
+.trust-note,
+.market-board-subtitle,
+.market-listing,
+.market-note,
+.footer-trust,
+.footer-contact {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+.landing .subtitle,
+.landing > p,
+.trust-note {
+  width: 100% !important;
+  max-width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.market-board { max-width: 760px !important; margin-left: auto !important; margin-right: auto !important; }
+.market-row { font-size: 16px !important; align-items: flex-start !important; }
+.market-details summary, .btn { font-size: 16px !important; }
+.market-listing h3, .market-board-title, .trust-note h2 { font-size: 18px !important; }
+.market-details-body p, .market-details-body li { font-size: 16px !important; line-height: 1.7 !important; }
+.footer-corporate-block { font-size: 16px !important; }
 </style>
 </head>
 <body>
@@ -106,7 +161,7 @@ body {
       <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       <a class="btn btn-primary" href="sellers.html">Seller access</a>
     </div>
-    <p style="font-size:12px;color:var(--ink-muted);margin-top:16px;">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined process.</p>
+    <p style="font-size:14px;color:var(--ink-muted);margin-top:16px;">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined process.</p>
     <div class="trust-note">
       <h2>Your Information Stays With You</h2>
       <p><strong>Initial qualification does not require bank account numbers, banking credentials, passwords, or other sensitive financial information.</strong></p>
@@ -125,6 +180,7 @@ body {
       <div class="market-row"><span class="market-label">Price</span><span class="market-value">Platts less $25/MT</span></div>
       <div class="market-row"><span class="market-label">First lift</span><span class="market-value">100,000 MT</span></div>
       <div class="market-row"><span class="market-label">Contract</span><span class="market-value">300,000 MT/month × 12 + rolls &amp; extensions</span></div>
+      <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
       <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
         <p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not accepted under this offer. Seller procedure provides for direct communication between the buyer's and seller's Vopak Terminal Managers for verification before injection and MT103/TT payment.</p>
         <a class="btn btn-primary" href="buyers.html">Buyer access</a>
@@ -139,8 +195,9 @@ body {
       <div class="market-row"><span class="market-label">CIF price</span><span class="market-value">$640–$620/MT</span></div>
       <div class="market-row"><span class="market-label">Trial / spot</span><span class="market-value">Up to 100,000 MT (MOQ)</span></div>
       <div class="market-row"><span class="market-label">Contract</span><span class="market-value">Up to 500,000 MT/month × 12</span></div>
+      <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">2 September 2026 · valid for 10 days</span></div>
       <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
-        <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT and intermediary fee protection. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
+        <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
         <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       </div></details>
     </div>
@@ -223,7 +280,7 @@ body {
           <li>Buyer orders SGS Q&amp;Q in seller's tank at buyer expense.</li>
           <li>After satisfactory Q&amp;Q, buyer submits the required TSR/ATV/SGS documentation and seller issues the final CI/title documentation.</li>
           <li>Buyer pays by MT103/TT and product injection into the buyer's secured tank proceeds under the stated procedure.</li>
-          <li>Intermediary fee-protection documents are executed at the stage stated in the seller procedure. This offer excludes Vopak and certain other named operators and also states that a tank-extension structure may be used.</li>
+          <li>This offer excludes Vopak and certain other named operators and also states that a tank-extension structure may be used.</li>
         </ol>
       </div></details>
     </div>
@@ -249,7 +306,7 @@ body {
         <ol>
           <li>Buyer issues LOI; seller responds with SCO.</li>
           <li>Buyer issues ICPO including the banking and corporate information required by the seller procedure.</li>
-          <li>Seller issues draft SPA; the parties review and execute the transaction documentation, including the stated intermediary-protection agreement.</li>
+          <li>Seller issues draft SPA; the parties review and execute the transaction documentation, including the stated transaction-protection agreement.</li>
           <li>Seller issues the stated PPOP package, including origin, registration, availability, product passport/specifications, commitment to supply and proforma invoice.</li>
           <li>After PPOP verification, buyer provides the financial instrument or guarantee step required by the seller procedure within the stated banking period.</li>
           <li>After confirmation of the instrument/deposit, seller issues the stated 2% performance bond and Full POP package and proceeds with shipment.</li>
@@ -285,7 +342,7 @@ body {
   </section>
 
 <div class="footer-contact">
-  <div class="footer-corporate-block" style="text-align: center; font-size: 12px; margin-top: 50px; padding-top: 20px; border-top: 1px solid #111111; line-height: 1.8; font-family: sans-serif;">
+  <div class="footer-corporate-block" style="text-align: center; font-size: 14px; margin-top: 50px; padding-top: 20px; border-top: 1px solid #111111; line-height: 1.8; font-family: sans-serif;">
     <p style="font-weight: bold; margin: 0 0 5px 0; text-transform: uppercase;">Jet Fuel Desk LLC</p>
     <p style="margin: 0;">Corporate Headquarters: 1500 N Grant St, Ste N, Denver, CO 80203</p>
     <p style="margin: 0;">Compliance Desk Tel: +1 (970) 780-2740</p>

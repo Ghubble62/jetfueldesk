@@ -51,7 +51,7 @@ body {
 .landing h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; }
 .landing .subtitle { font-size: 16px; color: var(--ink-secondary); max-width: 720px; margin: 0 auto 40px; line-height: 1.75; }
 .role-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn { font-family: inherit; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); }
+.btn { font-family: inherit; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); cursor: pointer; transition: all 150ms var(--ease-out); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
 .btn:hover { background: var(--surface-alt); }
 .btn:active { transform: scale(0.98); }
 .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
@@ -101,23 +101,23 @@ body {
 
   <div class="landing">
     <h1>Direct Connections.<br>Qualified Counterparties.</h1>
-    <p class="subtitle">Jet Fuel Desk is a direct intermediary service connecting verified fuel buyers and suppliers. Every counterpart is treated equally, and every transaction is handled with t[...]
+    <p class="subtitle">Jet Fuel Desk is a direct intermediary service connecting verified fuel buyers and suppliers. Every counterpart is treated equally, and every transaction is handled with transparency, efficiency, and direct communication.<br><br>We connect qualified parties without unnecessary layers or delays. We do not collect or store personal financial information or sensitive account details. Verification is completed directly through authorized sources, with buyers and suppliers prepared with the required banking, inspection, and storage documentation.</p>
     <div class="role-buttons">
       <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       <a class="btn btn-primary" href="sellers.html">Seller access</a>
     </div>
-    <p style="font-size:12px;color:var(--ink-muted);margin-top:16px;">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined[...]
+    <p style="font-size:12px;color:var(--ink-muted);margin-top:16px;">Direct source verification only. No unnecessary data collection. No wasted time. Just qualified connections and a streamlined process.</p>
     <div class="trust-note">
       <h2>Your Information Stays With You</h2>
       <p><strong>Initial qualification does not require bank account numbers, banking credentials, passwords, or other sensitive financial information.</strong></p>
-      <p>We simply need to understand your product requirement, quantity, delivery location, banking capability, and storage/logistics readiness. Transaction-specific verification is handled dire[...]
+      <p>We simply need to understand your product requirement, quantity, delivery location, banking capability, and storage/logistics readiness. Transaction-specific verification is handled directly through the appropriate banks, terminals, inspection companies, and counterparties when required.</p>
       <p><strong>We verify capability — we do not need access to your accounts.</strong></p>
     </div>
   </div>
 
   <section class="market-board" aria-label="Current seller opportunities">
     <div class="market-board-title">Current Seller Opportunities</div>
-    <p class="market-board-subtitle">Current seller-provided offers only. Seller identity and direct source contact information are withheld until the appropriate stage of a qualified, protected [...]
+    <p class="market-board-subtitle">Current seller-provided offers only. Seller identity and direct source contact information are withheld until the appropriate stage of a qualified, protected introduction.</p>
 
     <div class="market-listing" style="margin-bottom:12px;">
       <h3>EN590 10PPM — Vopak-to-Vopak</h3>
@@ -125,9 +125,8 @@ body {
       <div class="market-row"><span class="market-label">Price</span><span class="market-value">Platts less $25/MT</span></div>
       <div class="market-row"><span class="market-label">First lift</span><span class="market-value">100,000 MT</span></div>
       <div class="market-row"><span class="market-label">Contract</span><span class="market-value">300,000 MT/month × 12 + rolls &amp; extensions</span></div>
-      <div class="market-row"><span class="market-label">Buyer-side commission stated</span><span class="market-value">$5.00/MT</span></div>
       <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
-        <p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not acc[...]
+        <p class="market-note"><strong>Direct Vopak lease holders only.</strong> Buyer must submit CIS and identify its Vopak name in the ICPO. JV/group, proxy and sublease structures are not accepted under this offer. Seller procedure provides for direct communication between the buyer's and seller's Vopak Terminal Managers for verification before injection and MT103/TT payment.</p>
         <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       </div></details>
     </div>
@@ -141,7 +140,7 @@ body {
       <div class="market-row"><span class="market-label">Trial / spot</span><span class="market-value">Up to 100,000 MT (MOQ)</span></div>
       <div class="market-row"><span class="market-label">Contract</span><span class="market-value">Up to 500,000 MT/month × 12</span></div>
       <details class="market-details"><summary>View qualification requirements</summary><div class="market-details-body">
-        <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT and intermediar[...]
+        <p class="market-note">Buyer submits ICPO, company registration and TSA for seller review. The stated procedure includes CI, DTA, PPOP, recent SGS, buyer Q&amp;Q, MT103/TT and intermediary fee protection. This offer specifically excludes Vopak and certain other named operators. A tank-extension structure is also stated as available.</p>
         <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       </div></details>
     </div>
@@ -152,7 +151,7 @@ body {
       <div class="market-row"><span class="market-label">Pricing code stated</span><span class="market-value">Waterborne AATGYZ00 less $50</span></div>
       <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 28 September 2026</span></div>
       <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
-        <p class="market-note">Seller-provided FOB supplier-tank-to-buyer-tank procedure. Buyer submits ICPO with TSA, KYC/CIS, representative identification and banking details. Following approv[...]
+        <p class="market-note">Seller-provided FOB supplier-tank-to-buyer-tank procedure. Buyer submits ICPO with TSA, KYC/CIS, representative identification and banking details. Following approval and CI, the procedure calls for MT799/MT199 POF, POP documentation, buyer-arranged SGS/dip test, MT103 payment within 24–48 hours after a successful dip test, injection and title transfer. The offer does not state separate quantities or separate product-specific prices for these three commodities.</p>
         <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       </div></details>
     </div>
@@ -166,12 +165,123 @@ body {
       <div class="market-row"><span class="market-label">Urea quantity</span><span class="market-value">100,000 MT minimum · 500,000 MT/month</span></div>
       <div class="market-row"><span class="market-label">Offer date</span><span class="market-value">28 August 2026 · valid for 10 days</span></div>
       <details class="market-details"><summary>View procedure summary</summary><div class="market-details-body">
-        <p class="market-note">CIF procedure begins with buyer LOI, followed by seller SCO and buyer ICPO with banking and corporate information. The stated procedure includes draft SPA, NCNDA/IM[...]
+        <p class="market-note">CIF procedure begins with buyer LOI, followed by seller SCO and buyer ICPO with banking and corporate information. The stated procedure includes draft SPA, NCNDA/IMFPA, PPOP, a bank instrument or stated guarantee step, full POP and destination inspection before final MT103/TT settlement. Buyers should review the full redacted seller procedure before submitting documents.</p>
         <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       </div></details>
     </div>
 
-    <p class="market-note" style="margin-top:14px;">Jet Fuel Desk presents seller-provided commercial information as an introducing intermediary. Publication does not constitute an independent gu[...]
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>Multi-Product FOB / CIF Offer</h3>
+      <div class="market-row"><span class="market-label">FOB ports</span><span class="market-value">Rotterdam / Houston / Jurong / Fujairah / Qingdao / Zhoushan</span></div>
+      <div class="market-row"><span class="market-label">Products stated</span><span class="market-value">EN590 10PPM / EN590 50PPM / Jet A-1 / D6 / LNG / LPG / Gasoline / LCO / Base Oil / Fuel Oil</span></div>
+      <div class="market-row"><span class="market-label">Offer validity</span><span class="market-value">Through 25 September 2026</span></div>
+      <details class="market-details"><summary>View current product ranges</summary><div class="market-details-body">
+        <div class="market-row"><span class="market-label">EN590 10PPM / 50PPM</span><span class="market-value">FOB $630–$610/MT · CIF $640–$620/MT</span></div>
+        <div class="market-row"><span class="market-label">Jet A-1</span><span class="market-value">FOB $100–$96/BBL · CIF $112–$108/BBL</span></div>
+        <div class="market-row"><span class="market-label">D6</span><span class="market-value">FOB $1.08–$1.04/GAL · CIF $1.12–$1.08/GAL</span></div>
+        <div class="market-row"><span class="market-label">LNG / LPG</span><span class="market-value">FOB $680–$660/MT · CIF $690–$670/MT</span></div>
+        <div class="market-row"><span class="market-label">Gasoline 93 / 95</span><span class="market-value">FOB $580–$560/MT · CIF $590–$570/MT</span></div>
+        <div class="market-row"><span class="market-label">LCO</span><span class="market-value">FOB $460–$440/MT · CIF $570–$550/MT</span></div>
+        <div class="market-row"><span class="market-label">Base Oil SN150 / SN500 / SN650</span><span class="market-value">FOB $690–$670/MT · CIF $700–$710/MT</span></div>
+        <div class="market-row"><span class="market-label">Fuel Oil CST-180 / 280 / 380</span><span class="market-value">FOB $550–$530/MT · CIF $560–$540/MT</span></div>
+        <p class="market-note">Seller-provided current offer. Product, quantity, port and applicable procedure remain subject to seller/refinery review and confirmation for the specific buyer requirement.</p>
+        <a class="btn btn-primary" href="buyers.html">Buyer access</a>
+      </div></details>
+    </div>
+
+    <p class="market-note" style="margin-top:14px;">Jet Fuel Desk presents seller-provided commercial information as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, pricing, availability or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
+  </section>
+
+  <section class="market-board" aria-label="Current transaction procedures">
+    <div class="market-board-title">Current Transaction Procedures — Review Before Buyer Access</div>
+    <p class="market-board-subtitle">Seller-provided procedures for the five current offers. Seller identity and direct source contact information remain withheld. Buyers should select only a structure their company, bank, terminal and logistics providers can perform.</p>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>EN590 10PPM — Vopak-to-Vopak — Rotterdam / Houston</h3>
+      <details class="market-details" open><summary>View Vopak-to-Vopak procedure</summary><div class="market-details-body">
+        <ol>
+          <li>Buyer submits CIS and issues ICPO for seller verification and approval, identifying the buyer's Vopak facility/name.</li>
+          <li>Seller issues Commercial Invoice (CI); buyer signs and returns it within 24 hours.</li>
+          <li>Seller authorizes the buyer's Vopak Terminal Manager to communicate directly with the seller's Vopak Terminal Manager to verify product existence.</li>
+          <li>After seller-terminal confirmation, buyer's Vopak Terminal Manager submits its Vopak Terminal Agreement/reference and Vopak barcode.</li>
+          <li>Buyer completes the applicable Vopak terminal protocols.</li>
+          <li>Seller releases Full POP to the buyer's Vopak Terminal Manager and injection begins.</li>
+          <li>After completed injection, buyer pays by MT103/TT and seller transfers title.</li>
+          <li>Only direct Vopak lease holders are accepted; JV/group, proxy and sublease structures are not accepted under this offer.</li>
+        </ol>
+      </div></details>
+    </div>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>EN590 10PPM — Tank-to-Tank FOB</h3>
+      <details class="market-details"><summary>View tank-to-tank procedure</summary><div class="market-details-body">
+        <ol>
+          <li>Buyer submits ICPO with company registration and TSA. If the buyer has its own tank farm, the tank-farm name is submitted for seller review.</li>
+          <li>Seller issues Commercial Invoice (CI) for the available quantity; buyer signs and returns it.</li>
+          <li>Seller issues Dip Test Authorization (DTA), endorsed by the relevant parties including the buyer's tank farm. The DTA includes the tank number and hub number.</li>
+          <li>Seller issues the stated PPOP package, including recent SGS, TSR/tank-storage documents, port-authority authenticity documentation, origin/authority documents and export license.</li>
+          <li>Buyer orders SGS Q&amp;Q in seller's tank at buyer expense.</li>
+          <li>After satisfactory Q&amp;Q, buyer submits the required TSR/ATV/SGS documentation and seller issues the final CI/title documentation.</li>
+          <li>Buyer pays by MT103/TT and product injection into the buyer's secured tank proceeds under the stated procedure.</li>
+          <li>Intermediary fee-protection documents are executed at the stage stated in the seller procedure. This offer excludes Vopak and certain other named operators and also states that a tank-extension structure may be used.</li>
+        </ol>
+      </div></details>
+    </div>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>EN590 10PPM / Jet A-1 / D6 — Supplier Tank to Buyer Tank</h3>
+      <details class="market-details"><summary>View supplier-tank-to-buyer-tank procedure</summary><div class="market-details-body">
+        <ol>
+          <li>Buyer issues ICPO incorporating the seller procedure together with TSA, KYC/CIS, representative identification and banking details.</li>
+          <li>After buyer-company, bank and TSA review, seller issues Commercial Invoice (CI).</li>
+          <li>Buyer signs and returns the CI and provides MT799/MT199 Proof of Funds by SWIFT as stated in the offer.</li>
+          <li>Seller provides the stated POP package, including DTA, injection report, TSR with GPS coordinates, tank-farm barcode information, commitment to supply, registration/export documentation, ATSC, injection schedule, ATV and fresh SGS Q&amp;Q.</li>
+          <li>Buyer verifies the product/POP documents and orders SGS to conduct the dip test in the seller's tank at buyer expense.</li>
+          <li>Following a successful dip test, buyer pays by MT103 within 24–48 hours and product injection into the buyer's designated tank proceeds.</li>
+          <li>Seller transfers title of ownership into the buyer's name and issues the title-ownership certificate.</li>
+        </ol>
+      </div></details>
+    </div>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>Sulfur &amp; Urea — CIF</h3>
+      <details class="market-details"><summary>View CIF procedure</summary><div class="market-details-body">
+        <ol>
+          <li>Buyer issues LOI; seller responds with SCO.</li>
+          <li>Buyer issues ICPO including the banking and corporate information required by the seller procedure.</li>
+          <li>Seller issues draft SPA; the parties review and execute the transaction documentation, including the stated intermediary-protection agreement.</li>
+          <li>Seller issues the stated PPOP package, including origin, registration, availability, product passport/specifications, commitment to supply and proforma invoice.</li>
+          <li>After PPOP verification, buyer provides the financial instrument or guarantee step required by the seller procedure within the stated banking period.</li>
+          <li>After confirmation of the instrument/deposit, seller issues the stated 2% performance bond and Full POP package and proceeds with shipment.</li>
+          <li>At the discharge port, buyer coordinates SGS/CIQ inspection.</li>
+          <li>Following favorable destination inspection, buyer settles by MT103/TT under the SPA and the annual contract program continues after successful first shipment.</li>
+        </ol>
+        <p class="market-note"><strong>Important:</strong> The seller procedure also contains a stated $500,000 logistics-security deposit alternative if the required financial instrument is not issued within the specified period. Buyers should review the full redacted offer before proceeding.</p>
+      </div></details>
+    </div>
+
+    <div class="market-listing" style="margin-bottom:12px;">
+      <h3>Multi-Product FOB / CIF — Procedure Options</h3>
+      <p class="market-note">The current multi-product offer provides multiple transaction structures. The applicable procedure must be identified and accepted for the buyer's specific requirement.</p>
+      <details class="market-details"><summary>View available procedure options</summary><div class="market-details-body">
+        <ol>
+          <li>FOB Dip Test / Tank Injection</li>
+          <li>FOB Tank Takeover</li>
+          <li>FOB Tank Terminal Clearance / Tank Takeover</li>
+          <li>FOB Vessel-to-Tank (VTT)</li>
+          <li>FOB Tank-to-Tank (TTT)</li>
+          <li>FOB Tank-to-Tank / SGS Before Payment</li>
+          <li>FOB Rotterdam Tank-to-Tank</li>
+          <li>FOB Tank-to-Vessel (TTV)</li>
+          <li>FOB Title Takeover (TTO)</li>
+          <li>CIF Procedure</li>
+        </ol>
+        <p class="market-note">Buyer documentation, financial-capability verification, logistics documentation and payment sequence vary by procedure. Buyers should review the applicable redacted seller procedure before issuing transaction documents.</p>
+      </div></details>
+    </div>
+
+    <p class="market-note">These are seller-provided transaction procedures presented by Jet Fuel Desk as an introducing intermediary. Publication does not constitute an independent guarantee of product, allocation, terminal authority, banking performance or seller performance. Counterparties remain responsible for transaction-specific verification and due diligence.</p>
+    <a class="btn btn-primary" href="buyers.html">Buyer access</a>
   </section>
 
 <div class="footer-contact">

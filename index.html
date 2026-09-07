@@ -90,7 +90,7 @@ body {
 .market-details-body p { font-size: 17px; font-weight: 600; }
 
 
-.bottom-line { max-width: 760px; margin: 18px auto 0; font-size: 17px; line-height: 1.55; color: var(--ink-muted); font-weight: 700; text-align: center; }
+.bottom-line { max-width: 760px; margin: 20px auto 0; font-size: 19px; line-height: 1.6; color: var(--ink); font-weight: 700; text-align: center; }
 .market-label { font-weight: 700; min-width: 165px; }
 .footer-corporate-block { font-size: 16px !important; font-weight: 600; }
 @media (max-width: 700px) {
@@ -103,6 +103,38 @@ body {
   .market-label { min-width: 0; }
 }
 
+</style>
+
+<style id="final-color-override">
+html, body, .page { background: #ffffff !important; }
+body, .page, .landing, .landing p, .subtitle, .trust-note, .trust-note p,
+.market-board, .market-board-subtitle, .market-listing, .market-row, .market-label,
+.market-value, .market-note, .market-details, .market-details-body, .footer,
+.footer-trust, .footer-contact, .brand-name, .brand-domain, details, summary {
+  color: #000000 !important;
+}
+.market-listing, .trust-note, .btn { background: #ffffff !important; }
+.footer-contact a { color: #000000 !important; }
+</style>
+
+<style id="final-color-fix">
+html, body, .page, .header, .landing, .market-board, .footer, .market-listing, .trust-note, .market-details, .market-details-body {
+  background: #FFFFFF !important;
+}
+body, .page, .landing, .subtitle, .market-board-title, .market-board-subtitle, .market-listing, .market-listing h3, .market-row, .market-label, .market-value, .market-note, .market-details, .market-details summary, .market-details-body, .market-details-body li, .trust-note, .trust-note h2, .trust-note p, .bottom-line, .footer-trust, .footer-trust strong, .footer-contact, .brand-name, .brand-domain {
+  color: #000000 !important;
+}
+a.btn.btn-primary {
+  background: #0B3A6E !important;
+  color: #FFFFFF !important;
+  border-color: #0B3A6E !important;
+}
+a.btn.btn-primary:hover {
+  background: #082E57 !important;
+  color: #FFFFFF !important;
+  border-color: #082E57 !important;
+}
+.footer-contact a { color: #000000 !important; }
 </style>
 </head>
 <body>
@@ -121,7 +153,7 @@ body {
 
   <div class="landing">
     <h1>Direct Connections.<br>Qualified Counterparties.</h1>
-    <p class="subtitle">Jet Fuel Desk is a direct intermediary service connecting verified fuel buyers and suppliers. Every counterpart is treated equally, and every transaction is handled with transparency, efficiency, and direct communication.<br><br>We connect qualified parties without unnecessary layers or delays. We do not collect or store personal financial information or sensitive account details. Verification is completed directly through authorized sources, with buyers and suppliers prepared with the required banking, inspection, and storage documentation.</p>
+    <p class="subtitle">Jet Fuel Desk is a direct intermediary service connecting verified fuel buyers and suppliers.<br><br>Every counterpart is treated equally, and every transaction is handled with transparency, efficiency, and direct communication.<br><br>We connect qualified parties without unnecessary layers or delays. We do not collect or store personal financial information or sensitive account details. Verification is completed directly through authorized sources, with buyers and suppliers prepared with the required banking, inspection, and storage documentation.</p>
     <div class="role-buttons">
       <a class="btn btn-primary" href="buyers.html">Buyer access</a>
       <a class="btn btn-primary" href="sellers.html">Seller access</a>

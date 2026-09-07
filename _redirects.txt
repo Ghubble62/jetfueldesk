@@ -1,0 +1,3 @@
+/buyers /buyers.html 301
+/sellers /sellers.html 301
+/privacy /privacy.html 301
